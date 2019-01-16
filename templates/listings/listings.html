@@ -82,24 +82,7 @@
           <div class="col-md-12">
             <p>NO LISTINGS AVIALABLE</p>
           </div>  
-        {% endif %}
-        <!-- Listing 1 -->
-        
-
-        <!-- Listing 2 -->
-        
-
-        <!-- Listing 3 -->
-        
-
-        <!-- Listing 4 -->
-        
-
-        <!-- Listing 5 -->
-        
-
-        <!-- Listing 6 -->
-        
+        {% endif %}  
 
       </div>
 
@@ -130,7 +113,7 @@
               {% endif %}
             {% endfor %}
             {% if listings.has_other_pages %}
-              {% comment %} <ul class="pagination"> {% endcomment %}
+              <ul class="pagination">
                 {% if listings.has_next %}
                   <li class="page-item">
                     <a href="?page={{listings.next_page_number}}" class="page-link">&raquo;</a>
@@ -140,11 +123,11 @@
                       <a class="page-link">&raquo;</a>
                     </li>
                 {% endif %}
-              </ul>
              {% endif %}
-        </div>
+        {% comment %} </div> {% endcomment %}
         {% endif %}
+      </ul>
       </div>
-    </div>
+      </div>
   </section>
 {% endblock %}
