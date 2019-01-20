@@ -3,5 +3,6 @@
     "python.linting.pylintArgs": [
         "--load-plugins=pylint_django",
         "--errors-only"
-    ]
+    ],
+    "python.pythonPath": "C:\\Users\\ninjai74\\Anaconda3\\envs\\my_app\\python.exe"
 }
