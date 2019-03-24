@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from .models import listing
+
+from .models import Listing
+
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 def index(request):
-    listings = listing.objects.all()
+    listings = Listing.objects.all()
 
     paginator = Paginator(listings, 3)
     page = request.GET.get('page')
@@ -18,4 +20,4 @@ def listings(request, listing_id):
     return render(request, 'listings/listing.html')
 
 def search(request):
-    return render(request, 'listings/search.html')    
+    return render(request, 'listings/search.html')

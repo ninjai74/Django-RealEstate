@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import listing
+from .models import Listing
 
 class ListingAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'is_published', 'price', 'list_date', 'realtor')
@@ -12,4 +12,4 @@ class ListingAdmin(admin.ModelAdmin):
     # for pagination
     list_per_page = 25
 
-admin.site.register(listing, ListingAdmin)
+admin.site.register(Listing, ListingAdmin)
